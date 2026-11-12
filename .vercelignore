@@ -1,0 +1,6 @@
+# 배포 시 올라가지 않게 제외 (비밀 키)
+.env
+.env.*
+.git
+node_modules
+.next

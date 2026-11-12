@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+/* 밝은 화면 고정: 운영체제가 어두운 모드여도 dark: 스타일을 쓰지 않는다 */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* 리플렛 색: 네이비, 탄(황갈색), 베이지, 라벤더 회색 */
+:root {
+  --background: #ffffff;
+  --foreground: #1f2033;
+  --navy: #272f6a;
+  --tan: #a69071;
+  --beige: #e6dfd2;
+  --lavender: #6d6797;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-navy: var(--navy);
+  --color-tan: var(--tan);
+  --color-beige: var(--beige);
+  --color-lavender: var(--lavender);
+  --font-sans: var(--font-noto-sans-kr), "Malgun Gothic", sans-serif;
+  --font-mono: var(--font-geist-mono);
+}
+
+/* 기존 회색 선·테두리를 베이지·탄색으로 바꿔 화면 전체에 같은 색감을 준다 */
+@theme {
+  --color-zinc-200: #ece6db;
+  --color-zinc-300: #d9d1c2;
+  --color-zinc-400: #a69071;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-noto-sans-kr), "Malgun Gothic", sans-serif;
+}
+
+/* 구역 제목: 가는 위쪽 선 + 네이비 굵은 글씨 */
+.section-title {
+  border-top: 1px solid rgb(39 47 106 / 0.45);
+  padding-top: 0.75rem;
+  color: var(--navy);
+  font-weight: 700;
+}
+
+/* 숫자 강조 띠: 탄색 바탕에 흰 글씨 */
+.stat-strip {
+  background: var(--tan);
+  color: #ffffff;
+  padding: 0.5rem 0.9rem;
+  font-weight: 500;
+}
