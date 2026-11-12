@@ -7,10 +7,11 @@ export default function Home() {
   return (
     <>
       <header className="bg-navy text-white">
-        <div className="mx-auto flex w-full max-w-3xl items-end justify-between gap-6 px-6 py-10">
+        <div className="mx-auto flex w-full max-w-3xl items-end justify-between gap-4 px-6 py-10 sm:gap-6">
           <div className="flex flex-col gap-3">
             <p className="text-sm font-bold tracking-[0.2em] text-tan">DAILY WORK SCHEDULER</p>
-            <h1 className="text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
+            {/* 휴대폰 폭에서 "러" 한 글자만 다음 줄로 내려가지 않도록: 작은 화면은 글자를 줄이고, 줄이 나뉘어도 단어 단위로 나눈다 */}
+            <h1 className="break-keep text-balance text-2xl font-bold leading-tight tracking-tight min-[400px]:text-3xl sm:text-4xl">
               데일리 업무 스케줄러
             </h1>
             <p className="text-sm text-white/70">
@@ -24,7 +25,7 @@ export default function Home() {
             width={327}
             height={430}
             priority
-            className="h-20 w-auto shrink-0 sm:h-28"
+            className="h-14 w-auto shrink-0 min-[400px]:h-20 sm:h-28"
           />
         </div>
       </header>
