@@ -34,6 +34,7 @@ export default function Home() {
         <ul className="flex flex-col gap-2 rounded-md border border-tan/60 bg-beige/30 p-4 text-sm text-navy">
           <li>⚠ 대외비·비밀 내용은 입력하지 마세요</li>
           <li>⚠ 고객·직원의 실명, 전화번호, 주민등록번호 등을 넣지 마세요</li>
+          <li>ⓘ 입력한 업무명은 AI(OpenAI, 미국)로 전송됩니다</li>
           <li>ⓘ 이월 업무는 {CARRY_RETENTION_DAYS}일, 이행 기록은 {DONE_RETENTION_DAYS}일 뒤 자동 삭제</li>
         </ul>
         <TaskPlanner />
