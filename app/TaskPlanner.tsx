@@ -623,7 +623,7 @@ export default function TaskPlanner() {
         ) : (
           <div className="flex flex-col gap-1.5">
             <p className="text-xs text-zinc-600 dark:text-zinc-400">
-              체크하지 않은 업무는 다음에 같은 이름·사번·PIN을 입력하면 가져올 수 있습니다. PIN은 저장되지 않아 잊으면 찾을 수 없습니다.
+              이전에 못한 업무는 다음에 같은 이름·사번·PIN을 입력하면 가져올 수 있습니다.
             </p>
             <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs">
               <label className="flex items-center gap-1.5 text-zinc-700 dark:text-zinc-300">
